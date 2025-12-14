@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ReadTime Settings</title>
+    <style>
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            padding: 20px;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.5;
+            color: #333;
+        }
+
+        h1 {
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+        }
+
+        .section {
+            margin-bottom: 30px;
+            background: #fafafa;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .checkbox-label {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: normal;
+            cursor: pointer;
+        }
+
+        input[type="range"] {
+            width: 100%;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            background: #3b82f6;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .btn:hover {
+            background: #2563eb;
+        }
+
+        .status {
+            margin-top: 10px;
+            color: green;
+            font-size: 14px;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>ReadTime Settings</h1>
+
+    <div class="section">
+        <h2>Reading Preferences</h2>
+        <div class="form-group">
+            <label for="speed">Reading Speed (WPM): <span id="speedVal">200</span></label>
+            <input type="range" id="speed" min="100" max="600" step="10" value="200">
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Display Options</h2>
+        <div class="form-group">
+            <label class="checkbox-label">
+                <input type="checkbox" id="showBadge"> Show Reading Time Badge
+            </label>
+        </div>
+        <div class="form-group">
+            <label class="checkbox-label">
+                <input type="checkbox" id="showProgress"> Show Progress Bar
+            </label>
+        </div>
+        <div class="form-group">
+            <label class="checkbox-label">
+                <input type="checkbox" id="showResume"> Show Resume Notification
+            </label>
+        </div>
+    </div>
+
+    <button class="btn" id="save">Save Settings</button>
+    <div id="status" class="status">Settings saved!</div>
+
+    <script src="options.js"></script>
+</body>
+
+</html>

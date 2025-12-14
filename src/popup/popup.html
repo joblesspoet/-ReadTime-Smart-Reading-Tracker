@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ReadTime Dashboard</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="popup-container">
+    <!-- Header -->
+    <header class="popup-header">
+      <div class="popup-logo">
+        <img src="../../icons/icon48.png" alt="ReadTime" />
+        <h1>ReadTime</h1>
+      </div>
+      <button class="settings-btn" id="settingsBtn" title="Settings">⚙️</button>
+    </header>
+
+    <!-- Quick Stats -->
+    <div class="popup-stats">
+      <div class="stat-card">
+        <span class="stat-value" id="totalArticles">0</span>
+        <span class="stat-label">Articles</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-value" id="completedArticles">0</span>
+        <span class="stat-label">Done</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-value" id="minutesSaved">0</span>
+        <span class="stat-label">Min Read</span>
+      </div>
+    </div>
+
+    <!-- Filter Bar -->
+    <div class="filter-bar">
+      <input 
+        type="search" 
+        id="searchInput" 
+        placeholder="Search articles..." 
+        class="search-input"
+      />
+      <select id="filterSelect" class="filter-select">
+        <option value="all">All</option>
+        <option value="reading">Reading</option>
+        <option value="completed">Completed</option>
+      </select>
+    </div>
+
+    <!-- Article List -->
+    <div class="article-list" id="articleList">
+      <!-- Articles will be inserted here -->
+    </div>
+
+    <!-- Empty State -->
+    <div class="empty-state" id="emptyState" style="display: none;">
+      <div class="empty-icon">📚</div>
+      <h3>No Articles Yet</h3>
+      <p>Start reading articles to see them here</p>
+    </div>
+  </div>
+
+  <script type="module" src="popup.js"></script>
+</body>
+</html>
