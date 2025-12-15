@@ -40,6 +40,48 @@
   color: inherit;
 }
 
+.readtime-close-btn {
+  margin-left: 6px;
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: white;
+  font-size: 14px;
+  line-height: 1;
+  transition: background 0.2s;
+}
+
+.readtime-close-btn:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.readtime-close-btn {
+  margin-left: 6px;
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: white;
+  font-size: 14px;
+  line-height: 1;
+  transition: background 0.2s;
+}
+
+.readtime-close-btn:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+
 /* Progress Bar */
 .readtime-progress-bar {
   position: fixed;

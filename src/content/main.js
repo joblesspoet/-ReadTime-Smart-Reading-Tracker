@@ -80,7 +80,19 @@ class ReadTimeBadge {
     // Safety check
     if (!readingTimeMinutes || readingTimeMinutes < 1) return;
 
-    this.badge.innerHTML = `<span>${readingTimeMinutes} min read</span>`;
+    this.badge.innerHTML = `
+      <span>${readingTimeMinutes} min read</span>
+      <button class="readtime-close-btn" title="Dismiss">×</button>
+    `;
+
+    // Add close listener
+    this.badge.querySelector('.readtime-close-btn').addEventListener('click', (e) => {
+      e.stopPropagation();
+      this.hide();
+      // Optionally prevent it from showing again on this specific page load?
+      this.badge.remove(); 
+      this.badge = null;
+    });
     
     // Inject if not already there
     if (!document.body.contains(this.badge)) {
