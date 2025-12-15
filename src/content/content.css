@@ -15,7 +15,7 @@
   opacity: 0;
   transform: translateY(-10px);
   transition: opacity 0.4s ease, transform 0.4s cubic-bezier(0.18, 0.89, 0.32, 1.28);
-  pointer-events: none;
+  pointer-events: auto; /* Allow interaction */
   backdrop-filter: blur(4px);
   border: 1px solid rgba(255, 255, 255, 0.1);
   display: flex;
