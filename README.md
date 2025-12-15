@@ -26,6 +26,8 @@
 
 ---
 
+![ReadTime Demo](assets/demo-screenshot.png)
+
 ## ✨ Features
 
 ### MVP Features (v1.0.0)

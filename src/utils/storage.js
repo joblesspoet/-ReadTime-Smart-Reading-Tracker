@@ -30,6 +30,10 @@ class StorageManager {
       await chrome.storage.local.set({ [this.STORAGE_KEY]: articles });
       return true;
     } catch (error) {
+      if (error.message.includes('Extension context invalidated')) {
+          console.warn('ReadTime: Extension updated/reloaded. Please refresh the page.');
+          return false;
+      }
       console.error('ReadTime: Save failed', error);
       return false;
     }

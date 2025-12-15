@@ -55,6 +55,7 @@ export default class ArticleDetector {
     }
 
     if (contentElement) {
+      this.contentElement = contentElement; // Store for progress tracking
       return contentElement.innerText;
     }
 
