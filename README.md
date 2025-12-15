@@ -62,8 +62,8 @@
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/readtime-extension.git
-   cd readtime-extension
+   git clone https://github.com/joblesspoet/-ReadTime-Smart-Reading-Tracker.git
+   cd ReadTime-Smart-Reading-Tracker
    ```
 
 2. **Load in Chrome**
